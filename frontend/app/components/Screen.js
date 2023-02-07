@@ -8,9 +8,9 @@ function Screen({
     style
 }) {
     return (
-        <SafeAreaView style={[styles.screen, style]}>
-            <View style={[styles.view, style]}>
-                {children}
+        <SafeAreaView style={[ styles.screen, style ]}>
+            <View style={[ styles.view, style ]}>
+                { children }
             </View>
         </SafeAreaView>
     );
