@@ -3,9 +3,11 @@ import { View, Image, StyleSheet } from 'react-native';
 
 import defaultStyles from '../config/styles';
 
-function AppLogo() {
+function AppLogo({
+    style
+}) {
     return (
-        <View style={ styles.container }>
+        <View style={[ styles.container, style ]}>
             <Image resizeMode="contain" style={ styles.fiinworks_image } source={require('../assets/fiinworks.png')} />
             <View style={ styles.horizontal_line }></View>
             <Image resizeMode="contain" style={ styles.afiintra_image } source={require('../assets/afiintra.png')} /> 
