@@ -9,8 +9,8 @@ function AppText({
     ...otherProps
 }) {
     return (
-        <Text style={[defaultStyles.text, style]} {...otherProps}>
-            {children}
+        <Text style={[ defaultStyles.text, style ]} {...otherProps}>
+            { children }
         </Text>
     );
 }
