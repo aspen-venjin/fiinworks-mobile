@@ -11,10 +11,10 @@ function AppImage({
     width,
     ...otherProps
 }) {
-    const borderRadius = Math.ceil(((height + width)/2)*0.5);
+    const borderRadius = Math.ceil((( height + width )/2)*0.5);
 
     return (
-        <Image style={[ { height }, { width }, border && ([styles.border, { borderRadius }]), style ]} source={image} {...otherProps}/>
+        <Image style={[ { height }, { width }, border && ([ styles.border, { borderRadius } ]), style ]} source={ image } {...otherProps}/>
     );
 }
 
