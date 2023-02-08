@@ -1,6 +1,7 @@
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
+import AppImage from './AppImage';
 import defaultStyles from '../config/styles';
 
 function AppLogo({
@@ -8,25 +9,27 @@ function AppLogo({
 }) {
     return (
         <View style={[ styles.container, style ]}>
-            <Image resizeMode="contain" style={ styles.fiinworks_image } source={require('../assets/fiinworks.png')} />
+            <AppImage 
+                height={45}
+                image={require('../assets/fiinworks.png')}
+                resizeMode="contain"
+                width={50}
+            />
             <View style={ styles.horizontal_line }></View>
-            <Image resizeMode="contain" style={ styles.afiintra_image } source={require('../assets/afiintra.png')} /> 
+            <AppImage 
+                height={20}
+                image={require('../assets/afiintra.png')}
+                resizeMode="contain"
+                width={65}
+            />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    afiintra_image: {
-        height: 20,
-        width: 65,
-    },
     container: {
         alignItems: 'center',
         flexDirection: 'row',
-    },
-    fiinworks_image: {
-        height: 45,
-        width: 50,
     },
     horizontal_line: {
         backgroundColor: defaultStyles.colors.black,
