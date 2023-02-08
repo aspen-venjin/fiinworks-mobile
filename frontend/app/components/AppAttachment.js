@@ -23,7 +23,7 @@ function AppAttachment({
     ...otherProps
 }) {
     const borderRadius = Math.ceil(size*0.15);
-    const iconSize = Math.ceil(size*0.9);
+    const iconSize = Math.ceil(size*0.6);
 
     return (
         <View>
