@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -10,6 +10,7 @@ function AppCard({
     containerStyle,
     icon,
     iconColor = defaultStyles.colors.white,
+    onPress,
     subTitle,
     subtitleStyle,
     title,
@@ -17,19 +18,21 @@ function AppCard({
     size = 40
 }) {
     return (
-        <View style={[ styles.container, containerStyle ]}>
-            <View style={ styles.titleContainer }>
-                <AppText style={[ styles.text, titleStyle ]}>{ title }</AppText>
-                { subTitle && <AppText style={[ styles.text, subtitleStyle ]}>{ subTitle }</AppText> }
+        <TouchableWithoutFeedback onPress={onPress}>
+            <View style={[ styles.container, containerStyle ]}>
+                <View style={ styles.titleContainer }>
+                    <AppText style={[ styles.text, titleStyle ]}>{ title }</AppText>
+                    { subTitle && <AppText style={[ styles.text, subtitleStyle ]}>{ subTitle }</AppText> }
+                </View>
+                { icon && <View style={ styles.iconContainer }>
+                    <MaterialCommunityIcons 
+                        name={ icon }
+                        size={ size }
+                        color={ iconColor }
+                    />
+                </View>}
             </View>
-            { icon && <View style={ styles.iconContainer }>
-                <MaterialCommunityIcons 
-                    name={ icon }
-                    size={ size }
-                    color={ iconColor }
-                />
-            </View>}
-        </View>
+        </TouchableWithoutFeedback>
     );
 }
 
