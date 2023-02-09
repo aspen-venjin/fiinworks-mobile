@@ -14,13 +14,14 @@ function AppCard({
     subTitle,
     subtitleStyle,
     title,
+    titleContainer_Style,
     titleStyle,
     size = 40
 }) {
     return (
         <TouchableWithoutFeedback onPress={onPress}>
             <View style={[ styles.container, containerStyle ]}>
-                <View style={ styles.titleContainer }>
+                <View style={[ styles.titleContainer, titleContainer_Style ]}>
                     <AppText style={[ styles.text, titleStyle ]}>{ title }</AppText>
                     { subTitle && <AppText style={[ styles.text, subtitleStyle ]}>{ subTitle }</AppText> }
                 </View>
