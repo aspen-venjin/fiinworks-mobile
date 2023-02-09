@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
         borderColor: defaultStyles.colors.pink,
         borderWidth: 2,
         justifyContent: "center",
-        margin: 10,
         padding: 10
     },
     text: {
