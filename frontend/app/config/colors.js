@@ -14,5 +14,6 @@ export default {
     secondary_yellow: "#FFB155",
     primary_teal: "#06FDF4",
     secondary_teal: "#00C5BD",
-    transparent: "rgba(0, 0, 0, 0)"
+    transparent: "rgba(0, 0, 0, 0)",
+    translucent: "rgba(0, 0, 0, 0.5)"
 }
