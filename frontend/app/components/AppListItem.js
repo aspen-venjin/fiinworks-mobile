@@ -19,7 +19,8 @@ function AppListItem({
     description2,
     description2_Style,
     PostscriptComponent,
-    postscriptStyle
+    postscriptStyle,
+    StatusComponent
 }) {
     return (
         <TouchableWithoutFeedback onPress={onPress}>
@@ -33,6 +34,7 @@ function AppListItem({
                         { subTitle && <AppText adjustsFontSizeToFit={true} numberOfLines={3} style={[ styles.text, textStyle, subTitleStyle ]}>{ subTitle }</AppText> }
                         { description1 && <AppText adjustsFontSizeToFit={true} numberOfLines={3} style={[ styles.text, textStyle, description1_Style ]}>{ description1 }</AppText> }
                         { description2 && <AppText adjustsFontSizeToFit={true} numberOfLines={3} style={[ styles.text, textStyle, description2_Style ]}>{ description2 }</AppText> }
+                        { StatusComponent }
                     </View>
                     { PostscriptComponent && <View style={[ styles.postscriptContainer, postscriptStyle ]}>
                         { PostscriptComponent }
