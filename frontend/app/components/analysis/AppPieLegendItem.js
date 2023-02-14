@@ -1,36 +1,77 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import AppText from '../AppText';
 import defaultStyles from '../../config/styles';
 
 function AppPieLegendItem({
-    color = "primary",
-    text
+    item,
+    metric,
+    selected,
+    setSelectedByName
 }) {
     return (
-        <View style={ styles.container }>
-            <View style={[ styles.palette, { backgroundColor: defaultStyles.colors[ color ] } ]} />
-            <AppText style={ styles.text }>{ text }</AppText>
-        </View>
+        <TouchableOpacity
+            style={[
+                styles.container,
+                { backgroundColor: ( selected && selected.name == item.name ) ? item.color : defaultStyles.colors.white }
+            ]}
+            onPress={() => setSelectedByName( item.name )}
+        >
+            <View style={ styles.titleContainer }>
+                <View
+                    style={[
+                        styles.pallete,
+                        { backgroundColor: ( selected && selected.name == item.name ) ? defaultStyles.colors.white : item.color }
+                    ]}
+                />
+                <AppText style={[
+                    styles.title,
+                    { color: ( selected && selected.name == item.name ) ? defaultStyles.colors.white : defaultStyles.colors.primary }
+                ]}>{ item.name }</AppText>
+            </View>
+            <View style={ styles.metricContainer }>
+                <AppText style={[
+                    styles.metric,
+                    { color: (selected && selected.name == item.name) ? defaultStyles.colors.white : defaultStyles.colors.primary }
+                ]}>{ metric }{ item.y } - { item.label }</AppText>
+            </View>
+        </TouchableOpacity>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
+        borderRadius: 10,
+        flexDirection: 'row',
+        height: 40,
+        paddingHorizontal: 12
+    },
+    metric: {
+        ...defaultStyles.text,
+        fontSize: 14,
+        fontWeight: 'bold',
+        lineHeight: 22
+    },
+    metricContainer: {
+        justifyContent: 'center'
+    },
+    pallete: {
+        borderRadius: 5,
+        height: 20,
+        width: 20
+    },
+    title: {
+        ...defaultStyles.text,
+        fontSize: 15,
+        fontWeight: 'bold',
+        lineHeight: 22,
+        marginLeft: 8
+    },
+    titleContainer: {
         alignItems: 'center',
-        alignSelf: 'flex-start',
+        flex: 1,
         flexDirection: 'row'
-    },
-    palette: {
-        alignSelf: 'center',
-        height: 10,
-        marginRight: 15,
-        width: 25
-    },
-    text: {
-        color: defaultStyles.colors.primary,
-        fontWeight: 'bold'
     }
 })
 
