@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import {
   StyleSheet,
@@ -7,8 +8,13 @@ import {
   Text,
   ActivityIndicator,
 } from "react-native";
+=======
+import React, { useState } from "react";
+import { StyleSheet, View, FlatList, SafeAreaView } from "react-native";
+>>>>>>> c07b2ce (2)
 import AppCard from "../components/AppCard";
 import defaultStyles from "../config/styles";
+<<<<<<< HEAD
 import AppListItem from "../components/AppListItem";
 import AppAttachment from "../components/AppAttachment";
 import AppText from "../components/AppText";
@@ -272,16 +278,65 @@ function PenReq() {
     ) : null;
   };
   const scrollRef = useRef();
+=======
+
+let dummy = [
+  {
+    id: 1,
+    name: "John Doe",
+    requestType: "claim",
+    amount: 1000,
+    date: "2022-01-01",
+  },
+  {
+    id: 2,
+    name: "Jane Doe",
+    requestType: "claim",
+    amount: 2000,
+    date: "2022-02-01",
+  },
+  {
+    id: 3,
+    name: "Jim Smith",
+    requestType: "travel",
+    destination: "New York",
+    date: "2022-03-01",
+  },
+  {
+    id: 4,
+    name: "Sophie Williams",
+    requestType: "travel",
+    destination: "London",
+    date: "2022-04-01",
+  },
+  {
+    id: 5,
+    name: "Olivia Brown",
+    requestType: "claim",
+    amount: 1500,
+    date: "2022-05-01",
+  },
+];
+
+function PenReq() {
+  const setInitValue = (requestType) => {    
+    count=dummy.filter((request) => request.requestType === requestType).length
+    return count
+  };
+>>>>>>> c07b2ce (2)
   const [req, setReq] = useState({
     claim: setInitValue("claim"),
     travel: setInitValue("travel"),
   });
+<<<<<<< HEAD
   const onPressTouch = () => {
     scrollRef.current.scrollToEnd({
       y: 0,
       animated: true,
     });
   };
+=======
+>>>>>>> c07b2ce (2)
   const CT = [
     {
       id: "claim",
@@ -295,10 +350,14 @@ function PenReq() {
       title: req.travel,
       subTitle: "Pending Travel Requisitions",
       containerColor: defaultStyles.colors.secondary_teal,
+<<<<<<< HEAD
       onPress: () => {
         travelCounter();
         onPressTouch();
       },
+=======
+      onPress: () => travelCounter(),
+>>>>>>> c07b2ce (2)
     },
   ];
 
@@ -311,6 +370,7 @@ function PenReq() {
 
   return (
     <SafeAreaView>
+<<<<<<< HEAD
       <FlatList
         contentContainerStyle={styles.container}
         ref={scrollRef}
@@ -400,6 +460,37 @@ function PenReq() {
         onEndReached={handleLoadMore}
         onEndReachedThreshold={0.1}
       />
+=======
+      <View style={styles.Container}>
+        <FlatList
+          horizontal={true}
+          data={CT}
+          renderItem={(itemData, index) => {
+            return (
+              <View style={styles.flatView}>
+                <AppCard
+                  title={itemData.item.title}
+                  subTitle={itemData.item.subTitle}
+                  subtitleStyle={styles.subtitleStyle}
+                  titleStyle={styles.titleStyle}
+                  titleContainer={styles.titleContainer}
+                  onPress={itemData.item.onPress}
+                  containerStyle={{
+                    backgroundColor: itemData.item.containerColor,
+                    width: 150,
+                    margin: 10,
+                    height: 100,
+                    flexDirection: "row",
+                  }}
+                  titleContainer_Style={styles.titleContainer_Style}
+                />
+              </View>
+            );
+          }}
+          keyExtractor={(item, index) => item.id}
+        />
+      </View>
+>>>>>>> c07b2ce (2)
     </SafeAreaView>
   );
 }
@@ -434,11 +525,16 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     paddingLeft: 30,
   },
+<<<<<<< HEAD
+=======
+  titleStyle: {},
+>>>>>>> c07b2ce (2)
   titleContainer_Style: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-evenly",
     flex: 1,
+<<<<<<< HEAD
   },
   containerStyle: {
     backgroundColor: defaultStyles.colors.secondary_red,
@@ -468,5 +564,7 @@ const styles = StyleSheet.create({
   },
   loader: {
     paddingVertical: 15,
+=======
+>>>>>>> c07b2ce (2)
   },
 });
