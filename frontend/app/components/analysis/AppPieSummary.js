@@ -3,19 +3,21 @@ import { FlatList, View } from 'react-native';
 
 import AppPieLegendItem from './AppPieLegendItem';
 
+import { getSelectedName } from '../../functions/pie-chart';
+
 function AppPieSummary({
     data,
     metric = "RM",
     selected,
     setSelected
 }) {
-    const setSelectedByName = ( name ) => {
-        setSelected(
-            JSON.parse(
-                JSON.stringify( data ))
-                    .filter( item => item.name == name )[0]
-        )
-    }
+    // const setSelectedByName = ( name ) => {
+    //     setSelected(
+    //         JSON.parse(
+    //             JSON.stringify( data ))
+    //                 .filter( item => item.name == name )[0]
+    //     )
+    // }
 
     return (
         <View>
@@ -27,7 +29,7 @@ function AppPieSummary({
                         item={ item }
                         metric={ metric }
                         selected={ selected }
-                        setSelectedByName={ setSelectedByName }
+                        setSelectedByName={( name ) => setSelected(getSelectedName( data, name )) }
                     />
                 }
             />

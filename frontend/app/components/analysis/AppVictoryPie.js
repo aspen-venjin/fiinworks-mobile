@@ -5,6 +5,8 @@ import { VictoryPie } from 'victory-native';
 
 import defaultStyles from '../../config/styles';
 
+import { getSelectedName } from '../../functions/pie-chart';
+
 function AppVictoryPie({
     data,
     colorScale,
@@ -12,13 +14,13 @@ function AppVictoryPie({
     setSelected,
     ...otherProps
 }) {
-    const setSelectedByName = ( name ) => {
-        setSelected(
-            JSON.parse(
-                JSON.stringify( data ))
-                    .filter( item => item.name == name )[0]
-        )
-    }
+    // const setSelectedByName = ( name ) => {
+    //     setSelected(
+    //         JSON.parse(
+    //             JSON.stringify( data ))
+    //                 .filter( item => item.name == name )[0]
+    //     )
+    // }
 
     return (
         <VictoryPie
@@ -46,7 +48,7 @@ function AppVictoryPie({
                         return [
                             {
                                 target: "labels",
-                                mutation: ({ index }) => setSelectedByName( data[index].name )
+                                mutation: ({ index }) => setSelected(getSelectedName( data, data[index].name ))
                             }
                         ]
                     }
