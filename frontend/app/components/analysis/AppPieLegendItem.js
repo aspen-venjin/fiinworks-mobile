@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         flexDirection: 'row',
         height: 40,
-        paddingHorizontal: 12
+        paddingHorizontal: 12,
+        width: "50%"
     },
     metric: {
         ...defaultStyles.text,
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
     titleContainer: {
         alignItems: 'center',
         flex: 1,
-        flexDirection: 'row'
+        flexDirection: 'row',
     }
 })
 
