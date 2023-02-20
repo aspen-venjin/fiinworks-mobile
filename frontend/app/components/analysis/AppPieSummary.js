@@ -11,25 +11,17 @@ function AppPieSummary({
     selected,
     setSelected
 }) {
-    // const setSelectedByName = ( name ) => {
-    //     setSelected(
-    //         JSON.parse(
-    //             JSON.stringify( data ))
-    //                 .filter( item => item.name == name )[0]
-    //     )
-    // }
-
     return (
         <View>
             <FlatList
                 data={ data }
-                keyExtractor={ item => item.id.toString() }
+                keyExtractor={( item, index ) => index.toString()}
                 renderItem={({ item }) => 
                     <AppPieLegendItem
                         item={ item }
                         metric={ metric }
                         selected={ selected }
-                        setSelectedByName={( name ) => setSelected(getSelectedName( data, name )) }
+                        setSelectedByName={( name ) => setSelected(getSelectedName( data, name ))}
                     />
                 }
             />
