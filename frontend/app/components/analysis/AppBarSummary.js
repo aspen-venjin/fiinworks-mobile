@@ -25,7 +25,7 @@ function AppBarSummary({
 
 const styles = StyleSheet.create({
     container: {
-        marginHorizontal: 70
+        marginHorizontal: 50
     }
 })
 
