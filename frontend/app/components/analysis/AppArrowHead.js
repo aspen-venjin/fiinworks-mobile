@@ -17,11 +17,11 @@ function AppArrowHead({
         <Svg>
             <Polygon
                 fill={ color }
-                points="70,60, 66,70, 74,70"
+                points="50,47, 46,57, 54,57"
             />
             <Polygon
                 fill={ color }
-                points="290,234, 290,226, 300,230"
+                points="310,254, 310,246, 320,250"
             />
             <Line
                 x1={ x1 }
