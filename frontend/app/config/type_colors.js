@@ -1,15 +1,22 @@
 export default Object.freeze({
-    TOLL: "#FFC225",
-    PARKING: "#FFC652",
-    PUBLIC_TRANSPORT_FARES: "#FD9493",
-    LODGING: "#EE6BA3",
-    MILEAGE: "#955781",
-    TRAVEL_REQUISITION: "#595377",
-    PETROL: "#1967A2",
-    MEAL_SUBSIDY: "#46C2DA",
-    MEDICAL: "#4AEACB",
-    SWAB: "#C2EBDD",
-    ENTERTAINMENT: "#F8F1CA",
-    MISCELLANEOUS: "#FFF5A2",
-    STAFF_WELFARE: "#FFF35E"
+    pie: {
+        0: "#FD9493",
+        1: "#EE6BA3",
+        2: "#955781",
+        3: "#595377",
+        4: "#1967A2",
+        5: "#46C2DA",
+        6: "#4AEACB",
+        7: "#C2EBDD",
+        8: "#F8F1CA",
+        9: "#FFF5A2",
+        10: "#FFF35E",
+        11: "#FFC652",
+        12: "#FFC225"
+    },
+    bar: {
+        0: "#662EB2",
+        1: "#FC00FF59",
+        2: "#06FDF4"
+    }
 })
