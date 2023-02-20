@@ -4,6 +4,8 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import AppText from '../AppText';
 import defaultStyles from '../../config/styles';
 
+import { isBrightColor } from '../../functions/pie-chart';
+
 function AppPieLegendItem({
     item,
     metric,
@@ -22,18 +24,18 @@ function AppPieLegendItem({
                 <View
                     style={[
                         styles.pallete,
-                        { backgroundColor: ( selected && selected.name == item.name ) ? defaultStyles.colors.white : item.color }
+                        { backgroundColor: ( selected && selected.name == item.name ) ? (isBrightColor(item.color)? defaultStyles.colors.primary : defaultStyles.colors.white) : item.color }
                     ]}
                 />
                 <AppText style={[
                     styles.title,
-                    { color: ( selected && selected.name == item.name ) ? defaultStyles.colors.white : defaultStyles.colors.primary }
+                    { color: ( selected && selected.name == item.name ) ? (isBrightColor(item.color)? defaultStyles.colors.primary : defaultStyles.colors.white) : defaultStyles.colors.primary }
                 ]}>{ item.name }</AppText>
             </View>
             <View style={ styles.metricContainer }>
                 <AppText style={[
                     styles.metric,
-                    { color: (selected && selected.name == item.name) ? defaultStyles.colors.white : defaultStyles.colors.primary }
+                    { color: (selected && selected.name == item.name) ? (isBrightColor(item.color)? defaultStyles.colors.primary : defaultStyles.colors.white) : defaultStyles.colors.primary }
                 ]}>{ metric }{ item.y } - { item.label }</AppText>
             </View>
         </TouchableOpacity>
