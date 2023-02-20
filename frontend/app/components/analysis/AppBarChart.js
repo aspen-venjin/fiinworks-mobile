@@ -24,20 +24,16 @@ function AppBarChart({
 }) {
     return (
         <View>
-            <VictoryChart
-                padding={70}
-            >
+            <VictoryChart>
                 <VictoryLabel 
                     text={ title }
                     style={{ ...styles.text, ...styles.title }}
-                    x={25}
-                    y={15} 
+                    y={10}
                 />
                 <VictoryLabel 
                     text={ subTitle }
                     style={{ ...styles.text, ...styles.subTitle }}
-                    x={25}
-                    y={35} 
+                    y={30}
                 />
                 <VictoryAxis
                     style={{
@@ -64,7 +60,9 @@ function AppBarChart({
                     labelComponent={
                         <VictoryTooltip
                             cornerRadius={5}
-                            pointerLength={80}
+                            // pointerLength={85}
+                            center={ styles.tooltip }
+                            pointerOrientation="bottom"
                             renderInPortal={false}
                         />
                     }
@@ -162,6 +160,10 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         textAlign: null
+    },
+    tooltip: {
+        x: 170,
+        y: 50
     }
 })
 
