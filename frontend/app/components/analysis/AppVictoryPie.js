@@ -14,14 +14,6 @@ function AppVictoryPie({
     setSelected,
     ...otherProps
 }) {
-    // const setSelectedByName = ( name ) => {
-    //     setSelected(
-    //         JSON.parse(
-    //             JSON.stringify( data ))
-    //                 .filter( item => item.name == name )[0]
-    //     )
-    // }
-
     return (
         <VictoryPie
             data={ data }
