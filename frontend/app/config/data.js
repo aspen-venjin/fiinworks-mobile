@@ -312,3 +312,7 @@ const sampleClaims = [
         submission_date: 'Sun 01 04 2023 08:00:00 GMT+0800 (Malaysia Time)'
     }
 ];
+
+export{
+    sampleClaims
+}
