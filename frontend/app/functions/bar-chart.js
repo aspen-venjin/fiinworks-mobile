@@ -1,8 +1,11 @@
 import type_colors from "../config/type_colors";
+import { getDistinctClaimTypesCount } from "./pie-chart";
 
 const months = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 ];
+
+const getDistinctClaimTypesCountLimit = ( arr ) => getDistinctClaimTypesCount( arr ) > 5? 5 : getDistinctClaimTypesCount( arr );
 
 const getFirstIndexInc = num => parseInt(String(Math.floor( num ))[0]) + 1;
 
@@ -79,6 +82,7 @@ const getSortedBarData = ( arr ) => {
 const zeroFill = ( num, places ) => String( num ).padEnd( places, '0' );
 
 export{
+    getDistinctClaimTypesCountLimit,
     getFirstIndexInc,
     getMax,
     getPlaces,
