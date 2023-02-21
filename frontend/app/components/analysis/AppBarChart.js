@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
         textAlign: null
     },
     tooltip: {
-        x: 170,
+        x: defaultStyles.size.width/2,
         y: 50
     }
 })
