@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     },
     metric: {
         ...defaultStyles.text,
-        fontSize: 14,
+        fontSize: 13,
         fontWeight: 'bold',
         lineHeight: 22
     },
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     },
     title: {
         ...defaultStyles.text,
-        fontSize: 15,
+        fontSize: 13,
         fontWeight: 'bold',
         lineHeight: 22,
         marginLeft: 8
@@ -73,7 +73,8 @@ const styles = StyleSheet.create({
     titleContainer: {
         alignItems: 'center',
         flex: 1,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginRight: 10
     }
 })
 
