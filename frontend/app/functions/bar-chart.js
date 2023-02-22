@@ -10,7 +10,7 @@ const getDistinctClaimTypesCountLimit = ( arr ) => getDistinctClaimTypesCount( a
 const getFirstIndexInc = num => parseInt(String(Math.floor( num ))[0]) + 1;
 
 const getMax = ( arr ) => {
-    return Math.max(...arr.map( item => item.data.reduce((acc, item) => Math.max( item.amount ), 0)));
+    return Math.max(...arr.map( item => Math.max(...item.data.map(elem => elem.amount))));
 }
 
 const getPlaces = num => String(Math.floor( num )).length;
