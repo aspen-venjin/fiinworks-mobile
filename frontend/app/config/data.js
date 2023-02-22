@@ -11,7 +11,7 @@ const sampleClaims = [
         claim_id: '2',
         claim_type: 'Meal Subsidy',
         amount: 96.50,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Mon 01 02 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Mon 01 02 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -19,7 +19,7 @@ const sampleClaims = [
         claim_id: '3',
         claim_type: 'Mileage',
         amount: 19.20,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Sun 01 01 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Sun 01 01 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -27,7 +27,7 @@ const sampleClaims = [
         claim_id: '4',
         claim_type: 'Parking',
         amount: 83.50,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Wed 01 04 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Wed 01 04 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -35,7 +35,7 @@ const sampleClaims = [
         claim_id: '5',
         claim_type: 'Petrol',
         amount: 58.90,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Thu 01 05 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Thu 01 05 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -43,7 +43,7 @@ const sampleClaims = [
         claim_id: '6',
         claim_type: 'Public Transport Fares',
         amount: 2.50,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Fri 01 06 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Fri 01 06 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -51,7 +51,7 @@ const sampleClaims = [
         claim_id: '7',
         claim_type: 'Travel Requisition',
         amount: 422.60,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Wed 01 01 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Wed 01 01 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -59,7 +59,7 @@ const sampleClaims = [
         claim_id: '8',
         claim_type: 'Welfare',
         amount: 57.60,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Thu 01 02 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Thu 01 02 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -67,7 +67,7 @@ const sampleClaims = [
         claim_id: '9',
         claim_type: 'Medical',
         amount: 274.10,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Fri 01 03 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Fri 01 03 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -75,7 +75,7 @@ const sampleClaims = [
         claim_id: '10',
         claim_type: 'Swab',
         amount: 56.90,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Thu 01 01 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Thu 01 01 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -83,7 +83,7 @@ const sampleClaims = [
         claim_id: '11',
         claim_type: 'Entertainment',
         amount: 185.70,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Fri 01 02 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Fri 01 02 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -91,7 +91,7 @@ const sampleClaims = [
         claim_id: '12',
         claim_type: 'Miscellaneous',
         amount: 628.10,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Sat 01 03 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Sat 01 03 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -99,7 +99,7 @@ const sampleClaims = [
         claim_id: '13',
         claim_type: 'Lodging',
         amount: 85.50,
-        status: 'pending',
+        status: 'rejected',
         invoice_date: 'Sun 12 04 2022 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Sun 12 04 2022 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -235,7 +235,7 @@ const sampleClaims = [
         claim_id: '30',
         claim_type: 'Petrol',
         amount: 250.90,
-        status: 'pending',
+        status: 'approved',
         invoice_date: 'Thu 02 02 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Thu 02 02 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
@@ -259,7 +259,7 @@ const sampleClaims = [
         claim_id: '33',
         claim_type: 'Welfare',
         amount: 68.90,
-        status: 'pending',
+        status: 'approved',
         invoice_date: 'Thu 02 02 2023 08:00:00 GMT+0800 (Malaysia Time)',
         submission_date: 'Thu 02 02 2023 08:00:00 GMT+0800 (Malaysia Time)'
     },
