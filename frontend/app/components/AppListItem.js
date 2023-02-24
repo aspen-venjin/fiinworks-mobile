@@ -6,6 +6,7 @@ import defaultStyles from '../config/styles';
 
 function AppListItem({
     AttachmentComponent,
+    attachmentStyle,
     containerStyle,
     detailsContainer_Style,
     onPress,
@@ -25,7 +26,7 @@ function AppListItem({
     return (
         <TouchableWithoutFeedback onPress={onPress}>
             <View style={[ styles.container, containerStyle ]}>
-                { AttachmentComponent && <View style={ styles.attachment }>
+                { AttachmentComponent && <View style={[ styles.attachment, attachmentStyle ]}>
                     { AttachmentComponent }
                 </View>}
                 <View style={[ styles.detailsContainer, detailsContainer_Style ]}>
@@ -51,20 +52,20 @@ const styles = StyleSheet.create({
     },
     container: {
         alignItems: 'center',
-        flexDirection: 'row',
+        flexDirection: 'row'
     },
     detailsContainer: {
         flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+        flexDirection: 'row'
     },
     titleContainer: {
-        justifyContent: 'space-between',
+        flex: 1,
+        marginRight: 10
     },
     text: {
         color: defaultStyles.colors.primary,
         fontSize: 14,
-        marginVertical: 3
+        marginVertical: 2
     },
     postscriptContainer: {
         alignItems: 'flex-start',
