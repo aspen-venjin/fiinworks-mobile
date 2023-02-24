@@ -27,7 +27,7 @@ function AppPieLegendItem({
                         { backgroundColor: ( selected && selected.name == item.name ) ? (isBrightColor(item.color)? defaultStyles.colors.primary : defaultStyles.colors.white) : item.color }
                     ]}
                 />
-                <AppText style={[
+                <AppText numberOfLines={1} style={[
                     styles.title,
                     { color: ( selected && selected.name == item.name ) ? (isBrightColor(item.color)? defaultStyles.colors.primary : defaultStyles.colors.white) : defaultStyles.colors.primary }
                 ]}>{ item.name }</AppText>
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
-        marginRight: 10
+        marginRight: 20
     }
 })
 
