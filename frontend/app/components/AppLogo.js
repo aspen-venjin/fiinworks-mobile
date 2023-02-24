@@ -10,17 +10,17 @@ function AppLogo({
     return (
         <View style={[ styles.container, style ]}>
             <AppImage 
-                height={45}
+                height={40}
                 image={require('../assets/fiinworks.png')}
                 resizeMode="contain"
-                width={50}
+                width={45}
             />
             <View style={ styles.horizontal_line }></View>
             <AppImage 
-                height={20}
+                height={15}
                 image={require('../assets/afiintra.png')}
                 resizeMode="contain"
-                width={65}
+                width={50}
             />
         </View>
     );
