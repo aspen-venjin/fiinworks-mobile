@@ -1,5 +1,9 @@
 import type_colors from "../config/type_colors";
 
+const getCircularArrayValue = ( arr, index ) => {
+    return arr[index % arr.length];
+}
+
 const getColorScale = arr => arr.map( item => item.color);
 
 const getDistinctClaimTypes = ( arr ) => {
@@ -8,6 +12,14 @@ const getDistinctClaimTypes = ( arr ) => {
 
 const getDistinctClaimTypesCount = ( arr ) => {
     return [...new Set(arr.map(( item ) => item.claim_type))].length;
+}
+
+const getDistinctProjects = ( arr ) => {
+    return [...new Set(arr.map(( item ) => item.project_code))];
+}
+
+const getDistinctProjectsCount = ( arr ) => {
+    return [...new Set(arr.map(( item ) => item.project_code))].length;
 }
 
 const getLumaScale = ( hex ) => {
@@ -25,10 +37,10 @@ const getSelectedName = ( arr, name ) => {
                     .filter( item => item.name == name )[0]
 }
 
-const getSortedPieData = ( arr ) => {
+const getSortedPieData = ( arr, group_by = 'claim_type' ) => {
     let map = new Map();
     arr.forEach(
-        ( item ) => map.set(item.claim_type, (parseFloat(map.get( item.claim_type ) || 0) + parseFloat( item.amount )
+        ( item ) => map.set(item[group_by], (parseFloat(map.get( item[group_by] ) || 0) + parseFloat( item.amount )
     ).toFixed(2)));
     
     return Object.entries(Object.fromEntries( map ))
@@ -36,13 +48,13 @@ const getSortedPieData = ( arr ) => {
             return {
                 label: `${((parseFloat( value )/parseFloat(getTotalAmount( arr ))*100).toFixed(2))}%`,
                 name: key,
-                y: parseFloat(value)
+                y: parseFloat( value )
             };
         })
-        .sort(( first , second ) => parseFloat(first.label) - parseFloat(second.label))
+        .sort(( first , second ) => parseFloat( first.label ) - parseFloat( second.label ))
         .map(( item, index ) => {
             return {
-                color: type_colors.pie[index],
+                color: getCircularArrayValue(type_colors.pie, index),
                 ...item
             }
         });
@@ -58,6 +70,8 @@ export{
     getColorScale,
     getDistinctClaimTypes,
     getDistinctClaimTypesCount,
+    getDistinctProjects,
+    getDistinctProjectsCount,
     getSelectedName,
     getSortedPieData,
     getTotalAmount,
