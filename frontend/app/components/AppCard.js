@@ -19,7 +19,7 @@ function AppCard({
     size = 40
 }) {
     return (
-        <TouchableWithoutFeedback onPress={onPress}>
+        <TouchableWithoutFeedback onPress={ onPress }>
             <View style={[ styles.container, containerStyle ]}>
                 <View style={[ styles.titleContainer, titleContainer_Style ]}>
                     <AppText style={[ styles.text, titleStyle ]}>{ title }</AppText>
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.34,
         shadowRadius: 6.27,
-        width: '45%',
+        width: '47%'
     },
     titleContainer: {
         alignItems: 'flex-start',
