@@ -4,7 +4,7 @@ export default {
     black: "#000",
     white: "#fff",
     green: "#4FD966",
-    pink: "#FC00FF59",
+    pink: "#FEA8FF",
     primary_red: "#FF2730",
     secondary_red: "#DE8F85",
     primary_grey: "#51565F",
