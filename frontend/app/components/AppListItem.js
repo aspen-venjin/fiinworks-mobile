@@ -13,6 +13,7 @@ function AppListItem({
     textStyle,
     title,
     titleStyle,
+    titleContainerStyle,
     subTitle,
     subTitleStyle,
     description1,
@@ -30,9 +31,9 @@ function AppListItem({
                     { AttachmentComponent }
                 </View>}
                 <View style={[ styles.detailsContainer, detailsContainer_Style ]}>
-                    <View style={ styles.titleContainer }>
+                    <View style={[ styles.titleContainer, titleContainerStyle ]}>
                         <AppText style={[ styles.text, textStyle, titleStyle ]}>{ title }</AppText>
-                        { subTitle && <AppText adjustsFontSizeToFit={true} numberOfLines={3} style={[ styles.text, textStyle, subTitleStyle ]}>{ subTitle }</AppText> }
+                        { subTitle && <AppText numberOfLines={3} style={{ ...styles.text, ...textStyle, ...subTitleStyle }}>{ subTitle }</AppText> }
                         { description1 && <AppText adjustsFontSizeToFit={true} numberOfLines={3} style={[ styles.text, textStyle, description1_Style ]}>{ description1 }</AppText> }
                         { description2 && <AppText adjustsFontSizeToFit={true} numberOfLines={3} style={[ styles.text, textStyle, description2_Style ]}>{ description2 }</AppText> }
                         { StatusComponent }
